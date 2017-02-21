@@ -1,12 +1,15 @@
 
 <div class="menu">
-  …
-  {{#if session.isAuthenticated}}
-    <a {{action 'invalidateSession'}}>Logout</a>
-  {{else}}
-    {{#link-to 'login'}}Login{{/link-to}}
-  {{/if}}
+
+	{{#if session.isAuthenticated}}
+	<a {{action 'invalidateSession'}}>Logout</a>
+
+	<h2>Signed in as {{session.session.content.authenticated.name}}</h2>
+	<h2>Hi, {{sessionAccount.account.name}} </h2>
+	{{else}}
+	{{#link-to 'login'}}Login{{/link-to}}
+	{{/if}}
 </div>
 <div class="main">
-  {{outlet}}
+	{{outlet}}
 </div>
