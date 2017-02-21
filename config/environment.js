@@ -21,11 +21,11 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-        contentSecurityPolicy: {
+    contentSecurityPolicy: {
       'default-src': "'self' 'unsafe-inline' 'unsafe-eval'",
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
       'font-src': "'self'",
-      'connect-src': "'self' http://emberwebapi.gear.host",
+      'connect-src': "'self' http://emberwebapi.gear.host http://localhost:58797",
       'img-src': "'self'",
       'style-src': "'self' 'unsafe-inline'",
       'frame-src': "'none'"
